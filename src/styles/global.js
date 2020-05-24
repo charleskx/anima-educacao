@@ -14,6 +14,10 @@ export default createGlobalStyle`
     outline: none;
   }
 
+  html {
+    font-size: 62.5%;
+  }
+
   html, body, #root {
     height: 100%;
     background: #e5e5e5;
