@@ -1,9 +1,13 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Container, Header } from './styles';
 
 function Dashboard() {
-  return <h1>Dashboard</h1>;
+  return (
+    <Container>
+      <Header>Pessoas que vão ganhar dinheiro</Header>
+    </Container>
+  );
 }
 
 export default Dashboard;
