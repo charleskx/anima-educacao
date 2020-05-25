@@ -22,6 +22,10 @@ export default createGlobalStyle`
     height: 100%;
     background: #e5e5e5;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+      overflow-y: auto;
+    }
   }
 
   body {
@@ -43,5 +47,13 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer
+  }
+
+  .hiddenSM {
+    display: inline-block;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `;

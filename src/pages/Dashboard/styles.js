@@ -24,4 +24,8 @@ export const Content = styled.div`
   > div:not(:last-child) {
     margin-bottom: 4.6rem;
   }
+
+  @media (max-width: 768px) {
+    overflow: none;
+  }
 `;

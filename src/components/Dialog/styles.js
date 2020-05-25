@@ -35,6 +35,54 @@ export const Container = styled.div`
         cursor: not-allowed;
       }
     }
+
+    @media (max-width: 560px) {
+      height: 39.1rem;
+      flex: 0;
+
+      button {
+        width: 16rem;
+        height: 14.7rem;
+        font-size: 2.6rem;
+      }
+    }
+
+    @media (max-width: 451px) {
+      height: 36rem;
+
+      button {
+        width: 14rem;
+      }
+    }
+
+    @media (max-width: 375px) {
+      height: 26rem;
+      margin-bottom: 13rem;
+
+      button {
+        width: 10rem;
+        height: 10rem;
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 320px) {
+      height: 20rem;
+      margin-bottom: 19rem;
+
+      button {
+        width: 9rem;
+        height: 9rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: ${(props) => (props.open ? '99' : '-1')};
   }
 `;
 
