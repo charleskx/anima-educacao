@@ -27,7 +27,10 @@ function Dialog() {
     <>
       <Container open={open}>
         <Header>
-          <p>Quantos reais adicionar para {employee.title || ''}</p>
+          <p>
+            Quantos reais adicionar{' '}
+            <span className="hiddenSM">para {employee.title || ''}</span>?
+          </p>
           <button type="button" onClick={() => dispatch(close())}>
             <FiX />
           </button>

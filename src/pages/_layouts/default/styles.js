@@ -3,12 +3,21 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   height: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Container = styled.div`
   flex: 1;
   max-width: 90.5rem;
   padding-top: 2.9rem;
+
+  @media (max-width: 768px) {
+    padding: 2.2rem 2.8rem 2.2rem;
+    width: 100%;
+  }
 `;
 
 export const Navbar = styled.nav`
@@ -19,6 +28,20 @@ export const Navbar = styled.nav`
   display: flex;
   flex-direction: column;
   padding: 2.2rem 2.9rem;
+  position: relative;
+
+  button.responsive {
+    display: none;
+    position: absolute;
+    top: 1.4rem;
+    left: 2.2rem;
+    font-size: 3.2rem;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    color: #fff;
+  }
 
   .navigation {
     margin-top: 3rem;
@@ -39,6 +62,36 @@ export const Navbar = styled.nav`
       display: block;
     }
   }
+
+  @media (max-width: 1024px) {
+    margin-right: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 6rem;
+    padding: 0;
+    display: block;
+    margin-right: 0;
+
+    .navigation {
+      /* display: none; */
+      position: absolute;
+      top: -3rem;
+      right: ${(props) => (props.open ? 0 : '-100%')};
+      width: 75%;
+      max-width: 29rem;
+      background: #468e40;
+      height: 100vh;
+      z-index: 100;
+      padding: 2rem;
+      transition: 0.3s;
+    }
+
+    button.responsive {
+      display: block;
+    }
+  }
 `;
 
 export const Logo = styled.div`
@@ -54,4 +107,12 @@ export const Logo = styled.div`
   text-transform: uppercase;
   border-radius: 3.4rem;
   user-select: none;
+
+  @media (max-width: 768px) {
+    width: 9.3rem;
+    height: 4.2rem;
+    font-size: 1.4rem;
+    margin: 1rem auto;
+    border-radius: 1.7rem;
+  }
 `;

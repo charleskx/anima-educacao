@@ -7,6 +7,14 @@ export const Container = styled.div`
   padding: 2.1rem 2.4rem;
   position: relative;
   display: flex;
+
+  @media (max-width: 660px) {
+    height: 22.5rem;
+  }
+
+  @media (max-width: 508px) {
+    height: 27.5rem;
+  }
 `;
 
 export const Notification = styled.div`
@@ -33,6 +41,10 @@ export const Icon = styled.div`
   color: #059d42;
   font-size: 4.2rem;
   margin-right: 2.4rem;
+
+  @media (max-width: 508px) {
+    display: none;
+  }
 `;
 
 export const Info = styled.div`

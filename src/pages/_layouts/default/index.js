@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FiMenu } from 'react-icons/fi';
 
 import PropTypes from 'prop-types';
 
 import { Wrapper, Container, Navbar, Logo } from './styles';
 
 function DefaultLayout({ children }) {
+  const [open, setOpen] = useState(false);
+
   return (
     <Wrapper>
-      <Navbar>
+      <Navbar open={open}>
+        <button
+          type="button"
+          className="responsive"
+          onClick={() => setOpen(!open)}
+        >
+          <FiMenu />
+        </button>
+
         <Logo>Logotipo</Logo>
 
         <ul className="navigation">
