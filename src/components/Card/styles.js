@@ -7,7 +7,6 @@ export const Container = styled.div`
   padding: 2.1rem 2.4rem;
   position: relative;
   display: flex;
-  margin-bottom: 4.6rem;
 `;
 
 export const Notification = styled.div`
@@ -18,7 +17,7 @@ export const Notification = styled.div`
   display: flex;
   align-items: center;
   padding: 0 1.4rem;
-  background: #e14646;
+  background: ${(props) => (props.color === 0 ? '#e14646' : '#059d42')};
   font-size: 1.6rem;
   position: absolute;
   right: -2.6rem;
@@ -80,6 +79,10 @@ export const Actions = styled.div`
     align-items: center;
     background: transparent;
 
+    &:disabled {
+      cursor: not-allowed;
+    }
+
     p {
       margin: 0;
       padding: 0;
@@ -123,7 +126,7 @@ export const Percentage = styled.div`
     color: rgba(0, 0, 0, 0.7);
     font-size: 0.9rem;
     top: 0;
-    left: ${(props) => (props.width ? `calc(${props.width}% - 4rem)` : '1rem')};
+    left: ${(props) => (props.width ? `calc(${props.width}% - 5rem)` : '1rem')};
     display: flex;
     align-items: center;
   }
